@@ -1,7 +1,6 @@
+import { testShared } from '@haiquy572001/suco-cli-shared'
 import { Command } from 'commander'
 import { describe, expect, it, vi } from 'vitest'
-
-import { testShared } from '@vrn-deco/cli-shared'
 
 import { Action, runAction } from '../action.js'
 
@@ -27,7 +26,7 @@ class HelloAction extends Action<HelloArguments, HelloOptions> {
   }
 }
 
-describe('@vrn-deco/cli-command -> action.ts', () => {
+describe('@haiquy572001/suco-cli-command -> action.ts', () => {
   it('No environment variables will throw an exception', async () => {
     expect(runAction(HelloAction)('Hoyoe', { welcome: false }, new Command())).rejects.toThrow(
       'command sub package can be invoked',

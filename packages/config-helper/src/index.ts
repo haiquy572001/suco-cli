@@ -19,9 +19,8 @@
 import crypto from 'node:crypto'
 import path from 'node:path'
 
+import { NPMRegistry, PackageManager } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
-
-import { NPMRegistry, PackageManager } from '@vrn-deco/cli-shared'
 
 type ConfigWrapper<T extends BaseConfig> = {
   packageVersion: string

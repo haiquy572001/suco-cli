@@ -1,12 +1,11 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { Command, runAction } from '@haiquy572001/suco-cli-command'
+import { testShared } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 import YAML from 'yaml'
-
-import { Command, runAction } from '@vrn-deco/cli-command'
-import { testShared } from '@vrn-deco/cli-shared'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -59,7 +58,7 @@ afterAll(() => {
   fsWriteFileSyncSpy.mockRestore()
 })
 
-describe('@vrn-deco/cli-command-boilerplate -> list -> list.action.ts', () => {
+describe('@haiquy572001/suco-cli-command-boilerplate -> list -> list.action.ts', () => {
   it('Can print simple manifest', async () => {
     await runAction(ListAction)({}, new Command())
     expect(loadPackageManifest).toBeCalled()

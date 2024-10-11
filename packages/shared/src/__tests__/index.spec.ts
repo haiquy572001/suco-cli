@@ -9,7 +9,7 @@ import { cmdExists, dynamicImport, isFunction, noop, testShared } from '../index
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-describe.concurrent('@vrn-deco/cli-shared -> index.ts', () => {
+describe.concurrent('@haiquy572001/suco-cli-shared -> index.ts', () => {
   it('noop is a function', () => {
     expect(isFunction(noop)).toBe(true)
   })

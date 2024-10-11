@@ -21,7 +21,7 @@ import {
   isUndefinedOrNull,
 } from '../type-helper.js'
 
-describe.concurrent('@vrn-deco/cli-shared -> type-helper.ts', () => {
+describe.concurrent('@haiquy572001/suco-cli-shared -> type-helper.ts', () => {
   it('check a number', () => {
     expect(isNumber(1)).toBe(true)
     expect(isNumber(1.1)).toBe(true)

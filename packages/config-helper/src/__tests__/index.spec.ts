@@ -1,10 +1,9 @@
 import os from 'node:os'
 import path from 'node:path'
 
+import { PackageManager, testShared } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
 import { afterAll, afterEach, describe, expect, it, vi } from 'vitest'
-
-import { PackageManager, testShared } from '@vrn-deco/cli-shared'
 
 import { readConfig, updateConfig, writeConfig } from '../index.js'
 
@@ -14,7 +13,7 @@ afterAll(() => {
   fs.pathExistsSync(TEST_HOME_PATH) && fs.removeSync(TEST_HOME_PATH)
 })
 
-describe('@vrn-deco/cli-config-helper -> index.ts', () => {
+describe('@haiquy572001/suco-cli-config-helper -> index.ts', () => {
   afterEach(() => {
     vi.clearAllMocks()
   })

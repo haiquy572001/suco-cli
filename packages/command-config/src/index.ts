@@ -3,7 +3,7 @@
  * @Date: 2021-06-26 00:58:09
  * @Description: config command
  */
-import { Command, runAction } from '@vrn-deco/cli-command'
+import { Command, runAction } from '@haiquy572001/suco-cli-command'
 
 import { ConfigAction } from './action.js'
 

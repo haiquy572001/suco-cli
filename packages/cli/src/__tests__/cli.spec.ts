@@ -1,6 +1,5 @@
+import { Command } from '@haiquy572001/suco-cli-command'
 import { beforeAll, describe, expect, it } from 'vitest'
-
-import { Command } from '@vrn-deco/cli-command'
 
 import commands from '../commands.js'
 import { initialEnv } from '../prepare.js'
@@ -12,7 +11,7 @@ beforeAll(() => {
   initialEnv()
 })
 
-describe('@vrn-deco/cli -> cli.ts', () => {
+describe('@haiquy572001/suco-cli -> cli.ts', () => {
   it('Can create a cli', () => {
     const cli = createCLI()
     expect(cli).toBeInstanceOf(Command)

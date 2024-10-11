@@ -3,7 +3,7 @@
  * @Date: 2022-05-16 11:21:43
  * @Description: boilerplate clear command
  */
-import { Command, runAction } from '@vrn-deco/cli-command'
+import { Command, runAction } from '@haiquy572001/suco-cli-command'
 
 import { ClearAction } from './clear.action.js'
 

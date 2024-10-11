@@ -1,23 +1,22 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { logger } from '@haiquy572001/suco-cli-log'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { logger } from '@vrn-deco/cli-log'
 
 import { isDistTagVersion, isPackage, parseModuleMap } from '../utils.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-describe('@vrn-deco/cli-npm-helper -> utils.ts -> isPackage', () => {
+describe('@haiquy572001/suco-cli-npm-helper -> utils.ts -> isPackage', () => {
   it('can verify a directory is a package', () => {
     expect(isPackage(__dirname)).toBe(false)
     expect(isPackage(path.join(__dirname, '..', '..'))).toBe(true)
   })
 })
 
-describe('@vrn-deco/cli-npm-helper -> utils.ts -> parseModuleMap', () => {
+describe('@haiquy572001/suco-cli-npm-helper -> utils.ts -> parseModuleMap', () => {
   beforeAll(() => {
     vi.spyOn(logger, 'warn').mockImplementation(() => void 0)
   })
@@ -45,7 +44,7 @@ describe('@vrn-deco/cli-npm-helper -> utils.ts -> parseModuleMap', () => {
   })
 })
 
-describe('@vrn-deco/cli-npm-helper -> utils.ts -> isDistTagVersion', () => {
+describe('@haiquy572001/suco-cli-npm-helper -> utils.ts -> isDistTagVersion', () => {
   it('can verify a version is a dist tag', () => {
     expect(isDistTagVersion('latest')).toBe(true)
     expect(isDistTagVersion('next')).toBe(true)

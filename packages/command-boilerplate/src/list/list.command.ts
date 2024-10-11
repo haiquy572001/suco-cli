@@ -3,7 +3,7 @@
  * @Date: 2021-07-29 16:09:40
  * @Description: boilerplate list command
  */
-import { Command, runAction } from '@vrn-deco/cli-command'
+import { Command, runAction } from '@haiquy572001/suco-cli-command'
 
 import { DEFAULT_MANIFEST_PACKAGE } from '../common.js'
 import { ListAction } from './list.action.js'

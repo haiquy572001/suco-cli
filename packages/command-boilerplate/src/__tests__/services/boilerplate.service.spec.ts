@@ -1,12 +1,11 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { logger } from '@haiquy572001/suco-cli-log'
+import { NPMPackage } from '@haiquy572001/suco-cli-npm-helper'
+import { NPMRegistry, PackageManager, testShared } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { logger } from '@vrn-deco/cli-log'
-import { NPMPackage } from '@vrn-deco/cli-npm-helper'
-import { NPMRegistry, PackageManager, testShared } from '@vrn-deco/cli-shared'
 
 import { DEFAULT_API_BASE_URL } from '../../common.js'
 
@@ -31,9 +30,9 @@ const { mockReadConfig, json, fetch } = vi.hoisted(() => {
 })
 
 // mock readConfig
-vi.mock('@vrn-deco/cli-config-helper', async () => {
-  const cliConfigHelper = await vi.importActual<typeof import('@vrn-deco/cli-config-helper')>(
-    '@vrn-deco/cli-config-helper',
+vi.mock('@haiquy572001/suco-cli-config-helper', async () => {
+  const cliConfigHelper = await vi.importActual<typeof import('@haiquy572001/suco-cli-config-helper')>(
+    '@haiquy572001/suco-cli-config-helper',
   )
   return {
     ...cliConfigHelper,
@@ -65,7 +64,7 @@ beforeAll(() => {
   testShared.injectTestEnv()
 })
 
-describe('@vrn-deco/cli-command-boilerplate -> services -> boilerplate.service.ts -> PackageBoilerplateService', () => {
+describe('@haiquy572001/suco-cli-command-boilerplate -> services -> boilerplate.service.ts -> PackageBoilerplateService', () => {
   beforeEach(() => {
     mockReadConfig.mockClear()
     NPMPackageLoadSpy.mockClear()
@@ -100,7 +99,7 @@ describe('@vrn-deco/cli-command-boilerplate -> services -> boilerplate.service.t
   })
 })
 
-describe('@vrn-deco/cli-command-boilerplate -> services -> boilerplate.service.ts -> HTTPBoilerplateService', () => {
+describe('@haiquy572001/suco-cli-command-boilerplate -> services -> boilerplate.service.ts -> HTTPBoilerplateService', () => {
   beforeEach(() => {
     json.mockClear()
     fetch.mockClear()

@@ -1,9 +1,8 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { logger } from '@haiquy572001/suco-cli-log'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { logger } from '@vrn-deco/cli-log'
 
 logger.setLevel('silent')
 
@@ -48,23 +47,27 @@ const runnerModule = {
   default: runner,
 }
 const dynamicImport = vi.fn().mockImplementation(() => Promise.resolve(runnerModule))
-vi.mock('@vrn-deco/cli-shared', async () => {
-  const sharedModule = await vi.importActual<typeof import('@vrn-deco/cli-shared')>('@vrn-deco/cli-shared')
+vi.mock('@haiquy572001/suco-cli-shared', async () => {
+  const sharedModule = await vi.importActual<typeof import('@haiquy572001/suco-cli-shared')>(
+    '@haiquy572001/suco-cli-shared',
+  )
   return { ...sharedModule, dynamicImport }
 })
 
 // mock prompt
 const prompt = vi.fn().mockRejectedValue(new Error('Deliberate Mistakes'))
-vi.mock('@vrn-deco/cli-command', async () => {
-  const cliCommandModule = await vi.importActual<typeof import('@vrn-deco/cli-command')>('@vrn-deco/cli-command')
+vi.mock('@haiquy572001/suco-cli-command', async () => {
+  const cliCommandModule = await vi.importActual<typeof import('@haiquy572001/suco-cli-command')>(
+    '@haiquy572001/suco-cli-command',
+  )
   return {
     ...cliCommandModule,
     prompt,
   }
 })
 
-const { testShared } = await import('@vrn-deco/cli-shared')
-const { Command, runAction } = await import('@vrn-deco/cli-command')
+const { testShared } = await import('@haiquy572001/suco-cli-shared')
+const { Command, runAction } = await import('@haiquy572001/suco-cli-command')
 const { PackageCreateAction } = await import('../../create/package-create.action.js')
 
 beforeAll(() => {
@@ -85,7 +88,7 @@ afterAll(() => {
 
 // here we only test of PackageCreateAction, the parent CreateAction is the mock
 // the test case for CreateAction at . /create.action.spec.ts
-describe('@vrn-deco/cli-command-boilerplate -> create -> package-create.action.ts', () => {
+describe('@haiquy572001/suco-cli-command-boilerplate -> create -> package-create.action.ts', () => {
   // non-interactive
   it('When the --yes options is passed, will check --target-boilerplate option, it is required', async () => {
     expect.assertions(1)

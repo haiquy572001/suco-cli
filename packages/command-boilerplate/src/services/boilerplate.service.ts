@@ -7,14 +7,14 @@ import path from 'node:path'
 import { pipeline as _pipeline } from 'node:stream'
 import { promisify } from 'node:util'
 
+import { readConfig } from '@haiquy572001/suco-cli-config-helper'
+import { logger } from '@haiquy572001/suco-cli-log'
+import { DistTag, NPMPackage } from '@haiquy572001/suco-cli-npm-helper'
+import { dynamicImport } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
 import fetch from 'node-fetch'
 
 import type { APIManifest, Manifest } from '@vrn-deco/boilerplate-protocol'
-import { readConfig } from '@vrn-deco/cli-config-helper'
-import { logger } from '@vrn-deco/cli-log'
-import { DistTag, NPMPackage } from '@vrn-deco/cli-npm-helper'
-import { dynamicImport } from '@vrn-deco/cli-shared'
 
 import { DEFAULT_API_BASE_URL, DEFAULT_MANIFEST_PACKAGE } from '../common.js'
 import { getCacheDirectory } from '../utils.js'

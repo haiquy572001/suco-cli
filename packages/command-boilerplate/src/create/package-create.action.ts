@@ -3,12 +3,13 @@
  * @Date: 2022-02-28 21:49:05
  * @Description: create action for package mode
  */
+import { prompt } from '@haiquy572001/suco-cli-command'
+import { readConfig } from '@haiquy572001/suco-cli-config-helper'
+import { logger } from '@haiquy572001/suco-cli-log'
+import type { NPMPackage } from '@haiquy572001/suco-cli-npm-helper'
+import { dynamicImport } from '@haiquy572001/suco-cli-shared'
+
 import type { Boilerplate, Lang, PresetRunner } from '@vrn-deco/boilerplate-protocol'
-import { prompt } from '@vrn-deco/cli-command'
-import { readConfig } from '@vrn-deco/cli-config-helper'
-import { logger } from '@vrn-deco/cli-log'
-import type { NPMPackage } from '@vrn-deco/cli-npm-helper'
-import { dynamicImport } from '@vrn-deco/cli-shared'
 
 import { PostGit } from '../common.js'
 import { PackageBoilerplateService } from '../services/boilerplate.service.js'

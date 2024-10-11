@@ -13,7 +13,7 @@ export function injectTestEnv(debugEnabled = false) {
     ...process.env,
     VRN_CLI_DEBUG_ENABLED: debugEnabled ? SwitchStatus.On : SwitchStatus.Off,
     VRN_CLI_NAME: 'vrn-cli-test',
-    VRN_CLI_PACKAGE_NAME: '@vrn-deco/cli-test',
+    VRN_CLI_PACKAGE_NAME: '@haiquy572001/suco-cli-test',
     VRN_CLI_VERSION: '1.0.0',
     VRN_CLI_HOME_PATH: path.resolve(os.homedir(), '.vrn-deco.test'),
     VRN_CLI_LOWEST_NODE_VERSION: '^12.20.0 || ^14.13.1 || >=16.0.0',

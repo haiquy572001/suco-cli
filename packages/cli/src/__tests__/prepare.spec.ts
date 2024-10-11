@@ -1,8 +1,7 @@
+import { logger } from '@haiquy572001/suco-cli-log'
+import { SwitchStatus } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
 import { describe, expect, it, vi } from 'vitest'
-
-import { logger } from '@vrn-deco/cli-log'
-import { SwitchStatus } from '@vrn-deco/cli-shared'
 
 logger.setLevel('silent')
 
@@ -15,7 +14,7 @@ const { initialEnv, checkUserHome, checkNodeVersion, printLOGO, setLogLevel, roo
   '../prepare.js'
 )
 
-describe('@vrn-deco/cli -> prepare.ts', () => {
+describe('@haiquy572001/suco-cli -> prepare.ts', () => {
   it('When user home directory is not exists, will throw a error', () => {
     const spy = vi.spyOn(fs, 'pathExistsSync').mockReturnValueOnce(false)
     expect(checkUserHome).toThrow('home directory does not exist')
@@ -26,7 +25,7 @@ describe('@vrn-deco/cli -> prepare.ts', () => {
     initialEnv()
     expect(process.env.VRN_CLI_DEBUG_ENABLED).toBe(SwitchStatus.Off)
     expect(process.env.VRN_CLI_NAME).toBe('vrn-cli')
-    expect(process.env.VRN_CLI_PACKAGE_NAME).toBe('@vrn-deco/cli')
+    expect(process.env.VRN_CLI_PACKAGE_NAME).toBe('@haiquy572001/suco-cli')
   })
 
   it('When local Node.js version less than lowest requirements, will throw a error', () => {

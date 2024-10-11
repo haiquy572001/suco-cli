@@ -5,12 +5,12 @@
  */
 import path from 'node:path'
 
+import { Action, type ActionArgs } from '@haiquy572001/suco-cli-command'
+import { colors } from '@haiquy572001/suco-cli-log'
 import fs from 'fs-extra'
 import YAML from 'yaml'
 
 import type { Manifest } from '@vrn-deco/boilerplate-protocol'
-import { Action, type ActionArgs } from '@vrn-deco/cli-command'
-import { colors } from '@vrn-deco/cli-log'
 
 import { type IBoilerplateProvider, PackageBoilerplateService } from '../services/boilerplate.service.js'
 

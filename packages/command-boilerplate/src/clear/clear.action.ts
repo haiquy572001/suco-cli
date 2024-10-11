@@ -3,10 +3,9 @@
  * @Date: 2022-05-16 11:25:16
  * @Description: boilerplate clear command action
  */
+import { Action, type ActionArgs } from '@haiquy572001/suco-cli-command'
+import { logger } from '@haiquy572001/suco-cli-log'
 import fs from 'fs-extra'
-
-import { Action, type ActionArgs } from '@vrn-deco/cli-command'
-import { logger } from '@vrn-deco/cli-log'
 
 import { getCacheDirectory } from '../utils.js'
 

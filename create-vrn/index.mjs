@@ -1,11 +1,12 @@
 #!/usr/bin/env node
+
 /*
  * @Author: Cphayim
- * this package is a wrapper for @vrn-deco/cli
+ * this package is a wrapper for @haiquy572001/suco-cli
  * support `npm init vrn` or `npx create-vrn`
  * used quick call to `vrn create` interactive `package` mode
  */
-import { main } from '@vrn-deco/cli'
+import { main } from '@haiquy572001/suco-cli'
 
 // -> vrn create
 // without arguments and options

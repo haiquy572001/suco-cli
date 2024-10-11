@@ -3,9 +3,8 @@
  * @Date: 2021-06-21 01:25:57
  * @Description: package install
  */
+import { NPMRegistry, PackageManager, cmdExists } from '@haiquy572001/suco-cli-shared'
 import { execa } from 'execa'
-
-import { NPMRegistry, PackageManager, cmdExists } from '@vrn-deco/cli-shared'
 
 export type InstallOptions = {
   name: string
@@ -46,7 +45,7 @@ export async function installPackage({
 
   /**
    * e.g.
-   * npm install @vrn-deco/cli --registry https://registry.npmjs.org
+   * npm install @haiquy572001/suco-cli --registry https://registry.npmjs.org
    */
   try {
     await execa(packageManager, args, {

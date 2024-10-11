@@ -1,12 +1,12 @@
-# @vrn-deco/cli
+# @haiquy572001/suco-cli
 
 ## 1.2.5
 
-Update some dependencies ([#71](https://github.com/vrn-deco/cli/issues/71), [#72](https://github.com/vrn-deco/cli/issues/72), [#74](https://github.com/vrn-deco/cli/issues/74))
+Update some dependencies ([#71](https://github.com/haiquy572001/suco-cli/issues/71), [#72](https://github.com/haiquy572001/suco-cli/issues/72), [#74](https://github.com/haiquy572001/suco-cli/issues/74))
 
 ## 1.2.4
 
-Update some dependencies ([#61](https://github.com/vrn-deco/cli/issues/61))
+Update some dependencies ([#61](https://github.com/haiquy572001/suco-cli/issues/61))
 
 ## 1.2.3
 
@@ -22,7 +22,7 @@ vrn boi clear
 
 ### Refactor:
 
-- Supports calling without arguments for `create` ([#23](https://github.com/vrn-deco/cli/issues/23))
+- Supports calling without arguments for `create` ([#23](https://github.com/haiquy572001/suco-cli/issues/23))
 
 ```sh
 vrn create app
@@ -37,20 +37,20 @@ Note that if you call with no arguments and pass the --yes option, you will get 
 
 ### Refactor:
 
-- Turn off the default `auto-install-dependencies` ([#19](https://github.com/vrn-deco/cli/issues/19), [#20](https://github.com/vrn-deco/cli/pull/20))
+- Turn off the default `auto-install-dependencies` ([#19](https://github.com/haiquy572001/suco-cli/issues/19), [#20](https://github.com/haiquy572001/suco-cli/pull/20))
   - No longer pass autoinstall dependencies to `presetRunner` by default
   - Can manually enable it via the `-i` or `--auto-install-deps` options
-- Prettify welcome logo of CLI ([#21](https://github.com/vrn-deco/cli/pull/21))
+- Prettify welcome logo of CLI ([#21](https://github.com/haiquy572001/suco-cli/pull/21))
 
 ## 1.2.0
 
 ### Features:
 
 - Implement the conventions of protocol v1.3.0 ([vrn-deco/boileerplate#109](https://github.com/vrn-deco/boilerplate/pull/109))
-- Passing additional parameters when calling the `runner` ([#11](https://github.com/vrn-deco/cli/issues/11), [#12](https://github.com/vrn-deco/cli/pull/12))
+- Passing additional parameters when calling the `runner` ([#11](https://github.com/haiquy572001/suco-cli/issues/11), [#12](https://github.com/haiquy572001/suco-cli/pull/12))
   - In `package` mode will automatically install dependencies, disable with `-A` or `--no-auto-install-deps` option
   - In `package` mode will automatically initialize git, disable by specifying `--post-git remove`
-- Implemented Lang and Boilerplate support for new protocols in interactive mode selection ([#11](https://github.com/vrn-deco/cli/issues/11), [#16](https://github.com/vrn-deco/cli/pull/16))
+- Implemented Lang and Boilerplate support for new protocols in interactive mode selection ([#11](https://github.com/haiquy572001/suco-cli/issues/11), [#16](https://github.com/haiquy572001/suco-cli/pull/16))
   - Highlight `recommended` and `deprecated`
   - Optimized `tags` display
 
@@ -58,7 +58,7 @@ Note that if you call with no arguments and pass the --yes option, you will get 
 
 ### Bug Fixes:
 
-- node:stream/promises compatibility on node 14 ([#6](https://github.com/vrn-deco/cli/issues/6))
+- node:stream/promises compatibility on node 14 ([#6](https://github.com/haiquy572001/suco-cli/issues/6))
 
 ## 1.1.2
 
@@ -68,11 +68,11 @@ Change welcome LOGO
 
 ### Bug Fixes:
 
-- Dynamic import ESM error in Windows terminal ([#5](https://github.com/vrn-deco/cli/issues/5))
+- Dynamic import ESM error in Windows terminal ([#5](https://github.com/haiquy572001/suco-cli/issues/5))
 
 ## 1.1.0
 
-Two other creation modes from the [1.x Features](https://github.com/vrn-deco/cli/wiki/Features) concept are implemented
+Two other creation modes from the [1.x Features](https://github.com/haiquy572001/suco-cli/wiki/Features) concept are implemented
 
 ### Features:
 

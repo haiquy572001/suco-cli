@@ -1,13 +1,13 @@
 <div align="center">
 
-<a href="https://github.com/vrn-deco/cli">
+<a href="https://github.com/haiquy572001/suco-cli">
 <img src="./docs/images/cli-logo.png" width="600" alt="vrn-cli" />
 </a>
 
-![GitHub Actions Status](https://github.com/vrn-deco/cli/actions/workflows/ci.yml/badge.svg)
-[![codecov](https://codecov.io/gh/vrn-deco/cli/branch/main/graph/badge.svg?token=9PA5BCTSFB)](https://codecov.io/gh/vrn-deco/cli)
-[![npm package](https://badgen.net/npm/v/@vrn-deco/cli)](https://www.npmjs.com/package/@vrn-deco/cli)
-![GitHub language](https://img.shields.io/github/languages/top/vrn-deco/cli.svg)
+![GitHub Actions Status](https://github.com/haiquy572001/suco-cli/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/haiquy572001/suco-cli/branch/main/graph/badge.svg?token=9PA5BCTSFB)](https://codecov.io/gh/haiquy572001/suco-cli)
+[![npm package](https://badgen.net/npm/v/@haiquy572001/suco-cli)](https://www.npmjs.com/package/@haiquy572001/suco-cli)
+![GitHub language](https://img.shields.io/github/languages/top/haiquy572001/suco-cli.svg)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-f49033.svg)](https://pnpm.io/)
 
@@ -15,7 +15,7 @@
 
 </div>
 
-`@vrn-deco/cli` is an automated command line tool whose core feature is to help you quickly build an engineered project via `boilerplate`. It supports multiple creation modes, you can get `boilerplate` from the sources we provide, or you can specify a third party or your own source.
+`@haiquy572001/suco-cli` is an automated command line tool whose core feature is to help you quickly build an engineered project via `boilerplate`. It supports multiple creation modes, you can get `boilerplate` from the sources we provide, or you can specify a third party or your own source.
 
 > ⚠️ Please make sure your **Node.js version >=18.0.0**
 
@@ -38,15 +38,15 @@ Then follow the prompts, you can create a project with the preset `boilerplate-p
 
 ### Install CLI
 
-If you need to use it frequently, or plan to learn the follow-up advanced guide, then please install `@vrn-deco/cli` globally
+If you need to use it frequently, or plan to learn the follow-up advanced guide, then please install `@haiquy572001/suco-cli` globally
 
 ```sh
 # npm
-npm install -g @vrn-deco/cli
+npm install -g @haiquy572001/suco-cli
 # yarn
-yarn add --global @vrn-deco/cli
+yarn add --global @haiquy572001/suco-cli
 # pnpm
-pnpm install -g @vrn-deco/cli
+pnpm install -g @haiquy572001/suco-cli
 ```
 
 Let's create another project, this time by executing `vrn create` command

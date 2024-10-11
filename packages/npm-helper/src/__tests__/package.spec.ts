@@ -1,10 +1,9 @@
 import os from 'node:os'
 import path from 'node:path'
 
+import { logger } from '@haiquy572001/suco-cli-log'
 import fs from 'fs-extra'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { logger } from '@vrn-deco/cli-log'
 
 import { DistTag } from '../common.js'
 
@@ -61,7 +60,7 @@ beforeEach(() => {
   fns.forEach((fn) => fn.mockReset())
 })
 
-describe('@vrn-deco/cli-npm-helper -> package.ts local mode', () => {
+describe('@haiquy572001/suco-cli-npm-helper -> package.ts local mode', () => {
   const moduleMap = {
     [TEST_PACKAGE_NAME]: path.join(TEST_CLI_HOME_PATH, 'test-pkg'),
   }
@@ -117,7 +116,7 @@ describe('@vrn-deco/cli-npm-helper -> package.ts local mode', () => {
   })
 })
 
-describe('@vrn-deco/cli-npm-helper -> package.ts default mode', () => {
+describe('@haiquy572001/suco-cli-npm-helper -> package.ts default mode', () => {
   it('Can create a NPMPackage object with default mode', async () => {
     const pkg = new NPMPackage({ name: TEST_PACKAGE_NAME, versionOrDistTag: '1.0.0', baseDir: TEST_CLI_HOME_PATH })
     expect(pkg).toBeDefined()

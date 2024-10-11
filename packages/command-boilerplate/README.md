@@ -1,11 +1,11 @@
-# `@vrn-deco/cli-command-create`
+# `@haiquy572001/suco-cli-command-create`
 
 > TODO: description
 
 ## Usage
 
 ```
-const commandCreate = require('@vrn-deco/cli-command-create');
+const commandCreate = require('@haiquy572001/suco-cli-command-create');
 
 // TODO: DEMONSTRATE API
 ```

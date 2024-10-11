@@ -5,11 +5,10 @@
  */
 import path from 'node:path'
 
+import { logger } from '@haiquy572001/suco-cli-log'
+import { cmdExists, noop } from '@haiquy572001/suco-cli-shared'
 import { execa } from 'execa'
 import fs from 'fs-extra'
-
-import { logger } from '@vrn-deco/cli-log'
-import { cmdExists, noop } from '@vrn-deco/cli-shared'
 
 import { PostGit } from '../common.js'
 import { CreateAction } from './create.action.js'

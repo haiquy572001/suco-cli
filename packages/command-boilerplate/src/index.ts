@@ -3,7 +3,7 @@
  * @Date: 2021-07-26 00:52:10
  * @Description: boilerplate services command
  */
-import { Command } from '@vrn-deco/cli-command'
+import { Command } from '@haiquy572001/suco-cli-command'
 
 import clearCommand from './clear/clear.command.js'
 import createCommand from './create/create.command.js'

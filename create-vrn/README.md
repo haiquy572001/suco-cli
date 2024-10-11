@@ -2,7 +2,7 @@
 
 [![npm package](https://badgen.net/npm/v/create-vrn)](https://www.npmjs.com/package/create-vrn)
 
-This package is a wrapper for @vrn-deco/cli, quickly create projects with full presets
+This package is a wrapper for @haiquy572001/suco-cli, quickly create projects with full presets
 
 ## Usage
 
@@ -17,10 +17,10 @@ yarn create vrn
 pnpm create vrn
 ```
 
-In fact it directly calls the `create` command of `@vrn-deco/cli`
+In fact it directly calls the `create` command of `@haiquy572001/suco-cli`
 
 Note that it only supports interactive creation in `package` mode, and does not support other advanced options
 
-If you need advanced features or custom configuration, please install `@vrn-deco/cli` globally
+If you need advanced features or custom configuration, please install `@haiquy572001/suco-cli` globally
 
-Documentation: [https://github.com/vrn-deco/cli](https://github.com/vrn-deco/cli)
+Documentation: [https://github.com/haiquy572001/suco-cli](https://github.com/haiquy572001/suco-cli)

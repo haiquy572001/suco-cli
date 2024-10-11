@@ -3,8 +3,8 @@
  * @Date: 2021-07-27 20:47:32
  * @Description: boilerplate create command
  */
-import { Command, Option, runAction } from '@vrn-deco/cli-command'
-import { logger } from '@vrn-deco/cli-log'
+import { Command, Option, runAction } from '@haiquy572001/suco-cli-command'
+import { logger } from '@haiquy572001/suco-cli-log'
 
 import { DEFAULT_API_BASE_URL, DEFAULT_MANIFEST_PACKAGE, Mode, PostGit } from '../common.js'
 import type { CreateAction, CreateOptions } from './create.action.js'

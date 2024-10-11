@@ -3,10 +3,10 @@
  * @Date: 2021-07-23 15:33:13
  * @Description: config command action
  */
-import { Action, type ActionArgs, prompt } from '@vrn-deco/cli-command'
-import { type BaseConfig, readConfig, updateConfig } from '@vrn-deco/cli-config-helper'
-import { colors, logger } from '@vrn-deco/cli-log'
-import { NPMRegistry, PackageManager, noop } from '@vrn-deco/cli-shared'
+import { Action, type ActionArgs, prompt } from '@haiquy572001/suco-cli-command'
+import { type BaseConfig, readConfig, updateConfig } from '@haiquy572001/suco-cli-config-helper'
+import { colors, logger } from '@haiquy572001/suco-cli-log'
+import { NPMRegistry, PackageManager, noop } from '@haiquy572001/suco-cli-shared'
 
 export type ConfigArguments = []
 export type ConfigOptions = Record<string, never>

@@ -4,7 +4,8 @@
  * @Description: mock create action for testing
  */
 import path from 'node:path'
-import { Action } from '@vrn-deco/cli-command'
+
+import { Action } from '@haiquy572001/suco-cli-command'
 
 export class CreateActionMock extends Action {
   static __MOCK__ = true

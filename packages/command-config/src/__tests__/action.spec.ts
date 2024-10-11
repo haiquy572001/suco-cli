@@ -1,8 +1,7 @@
+import type { BaseConfig } from '@haiquy572001/suco-cli-config-helper'
+import { logger } from '@haiquy572001/suco-cli-log'
+import { NPMRegistry, PackageManager, testShared } from '@haiquy572001/suco-cli-shared'
 import { beforeAll, describe, expect, it, vi } from 'vitest'
-
-import type { BaseConfig } from '@vrn-deco/cli-config-helper'
-import { logger } from '@vrn-deco/cli-log'
-import { NPMRegistry, PackageManager, testShared } from '@vrn-deco/cli-shared'
 
 logger.setLevel('silent')
 
@@ -18,16 +17,18 @@ const updateConfig = vi.fn((config: Partial<BaseConfig>) => {
   originConfig = { ...originConfig, ...config }
 })
 
-vi.mock('@vrn-deco/cli-command', async () => {
-  const commandModule = await vi.importActual<typeof import('@vrn-deco/cli-command')>('@vrn-deco/cli-command')
+vi.mock('@haiquy572001/suco-cli-command', async () => {
+  const commandModule = await vi.importActual<typeof import('@haiquy572001/suco-cli-command')>(
+    '@haiquy572001/suco-cli-command',
+  )
   return {
     ...commandModule,
     prompt,
   }
 })
-vi.mock('@vrn-deco/cli-config-helper', async () => {
-  const configHelperModule = await vi.importActual<typeof import('@vrn-deco/cli-config-helper')>(
-    '@vrn-deco/cli-config-helper',
+vi.mock('@haiquy572001/suco-cli-config-helper', async () => {
+  const configHelperModule = await vi.importActual<typeof import('@haiquy572001/suco-cli-config-helper')>(
+    '@haiquy572001/suco-cli-config-helper',
   )
   return {
     ...configHelperModule,
@@ -36,14 +37,14 @@ vi.mock('@vrn-deco/cli-config-helper', async () => {
   }
 })
 
-const { Command, runAction } = await import('@vrn-deco/cli-command')
+const { Command, runAction } = await import('@haiquy572001/suco-cli-command')
 const { ConfigAction } = await import('../action.js')
 
 beforeAll(() => {
   testShared.injectTestEnv()
 })
 
-describe('@vrn-deco/cli-command-config -> action.ts', () => {
+describe('@haiquy572001/suco-cli-command-config -> action.ts', () => {
   it('Can read current config', async () => {
     await runAction(ConfigAction)({}, new Command())
     expect(readConfig).toBeCalled()

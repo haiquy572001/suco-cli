@@ -17,5 +17,5 @@
 如果你想保持在 `v0.x`，请确保更新到 `v0.3.4`，它被标记为 `legacy`，该版本禁用了自动更新检查以防止更新到 `v1.x`
 
 ```sh
-npm install -g @vrn-deco/cli@legacy
+npm install -g @haiquy572001/suco-cli@legacy
 ```

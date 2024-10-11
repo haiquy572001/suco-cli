@@ -1,9 +1,8 @@
+import { Command, runAction } from '@haiquy572001/suco-cli-command'
+import { logger } from '@haiquy572001/suco-cli-log'
+import { testShared } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { Command, runAction } from '@vrn-deco/cli-command'
-import { logger } from '@vrn-deco/cli-log'
-import { testShared } from '@vrn-deco/cli-shared'
 
 logger.setLevel('silent')
 
@@ -27,7 +26,7 @@ afterAll(() => {
   fsRemoveSyncSpy.mockRestore()
 })
 
-describe('@vrn-deco/cli-command-boilerplate -> clear -> clear.action.ts', () => {
+describe('@haiquy572001/suco-cli-command-boilerplate -> clear -> clear.action.ts', () => {
   it('should be confirmed and cleaned cache', async () => {
     await runAction(ClearAction)(new Command())
     expect(fsExistsSyncSpy).toBeCalled()

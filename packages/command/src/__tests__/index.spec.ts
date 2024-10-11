@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { Command, prompt, registerCommands } from '../index.js'
 
-describe('@vrn-deco/cli-command -> index.ts', () => {
+describe('@haiquy572001/suco-cli-command -> index.ts', () => {
   it('Correct export', () => {
     expect(Command).toBeDefined()
     expect(prompt).toBeDefined()

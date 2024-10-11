@@ -5,9 +5,8 @@
  */
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { logger } from '@haiquy572001/suco-cli-log'
 import type { Command } from 'commander'
-
-import { logger } from '@vrn-deco/cli-log'
 
 export type Arguments = readonly unknown[]
 export type Options = { [key: string]: unknown }
@@ -89,7 +88,7 @@ export abstract class Action<A extends Arguments, O extends Options> {
       !process.env.VRN_CLI_VERSION ||
       !process.env.VRN_CLI_HOME_PATH
     ) {
-      throw new Error('command sub package can be invoked only through @vrn-deco/cli')
+      throw new Error('command sub package can be invoked only through @haiquy572001/suco-cli')
     }
   }
 }

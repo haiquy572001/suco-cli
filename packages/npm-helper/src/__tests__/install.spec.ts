@@ -8,20 +8,20 @@ const cmdExistsMock = vi.fn().mockImplementation(() => true)
 vi.mock('execa', () => ({
   execa: execaMock,
 }))
-vi.mock('@vrn-deco/cli-shared', async () => {
-  const m = await vi.importActual<typeof import('@vrn-deco/cli-shared')>('@vrn-deco/cli-shared')
+vi.mock('@haiquy572001/suco-cli-shared', async () => {
+  const m = await vi.importActual<typeof import('@haiquy572001/suco-cli-shared')>('@haiquy572001/suco-cli-shared')
   return {
     ...m,
     cmdExists: cmdExistsMock,
   }
 })
 
-const { NPMRegistry, PackageManager } = await import('@vrn-deco/cli-shared')
+const { NPMRegistry, PackageManager } = await import('@haiquy572001/suco-cli-shared')
 const { installPackage } = await import('../install.js')
 
 const TEST_PACKAGE_NAME = '@ombro/logger'
 
-describe('@vrn-deco/cli-npm-helper -> install.ts', () => {
+describe('@haiquy572001/suco-cli-npm-helper -> install.ts', () => {
   it('Arg name is required', async () => {
     expect.assertions(1)
     await expect(installPackage({ name: '' })).rejects.toThrow()

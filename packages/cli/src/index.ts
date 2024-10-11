@@ -3,7 +3,7 @@
  * @Date: 2021-06-18 01:03:57
  * @Description: entry
  */
-import { logger } from '@vrn-deco/cli-log'
+import { logger } from '@haiquy572001/suco-cli-log'
 
 import { createCLI } from './cli.js'
 import commands from './commands.js'

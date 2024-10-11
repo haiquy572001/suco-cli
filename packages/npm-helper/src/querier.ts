@@ -3,9 +3,8 @@
  * @Date: 2021-06-18 09:48:23
  * @Description: package query
  */
+import { NPMRegistry } from '@haiquy572001/suco-cli-shared'
 import fetch from 'node-fetch'
-
-import { NPMRegistry } from '@vrn-deco/cli-shared'
 
 import { DistTag } from './common.js'
 

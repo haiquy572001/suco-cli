@@ -1,10 +1,9 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { logger } from '@haiquy572001/suco-cli-log'
 import fs from 'fs-extra'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
-
-import { logger } from '@vrn-deco/cli-log'
 
 import { PostGit } from '../../common.js'
 
@@ -23,10 +22,12 @@ vi.mock('../../create/create.action.js', async () => {
   }
 })
 
-// mock '@vrn-deco/cli-shared'
+// mock '@haiquy572001/suco-cli-shared'
 const cmdExists = vi.fn(() => true)
-vi.mock('@vrn-deco/cli-shared', async () => {
-  const cliSharedModule = await vi.importActual<typeof import('@vrn-deco/cli-shared')>('@vrn-deco/cli-shared')
+vi.mock('@haiquy572001/suco-cli-shared', async () => {
+  const cliSharedModule = await vi.importActual<typeof import('@haiquy572001/suco-cli-shared')>(
+    '@haiquy572001/suco-cli-shared',
+  )
   return {
     ...cliSharedModule,
     cmdExists,
@@ -46,8 +47,8 @@ vi.mock('execa', async () => {
 // mock removeSync
 const removeSyncSpy = vi.spyOn(fs, 'removeSync').mockImplementation(() => void 0)
 
-const { testShared } = await import('@vrn-deco/cli-shared')
-const { Command, runAction } = await import('@vrn-deco/cli-command')
+const { testShared } = await import('@haiquy572001/suco-cli-shared')
+const { Command, runAction } = await import('@haiquy572001/suco-cli-command')
 const { GitCreateAction } = await import('../../create/git-create.action.js')
 
 beforeAll(() => {
@@ -66,7 +67,7 @@ afterAll(() => {
 
 // here we only test of GitCreateAction, the parent CreateAction is the mock
 // the test case for CreateAction at . /create.action.spec.ts
-describe('@vrn-deco/cli-command-boilerplate -> create -> git-create.action.ts', () => {
+describe('@haiquy572001/suco-cli-command-boilerplate -> create -> git-create.action.ts', () => {
   it('When git is not installed, will throw a error', async () => {
     expect.assertions(1)
     try {

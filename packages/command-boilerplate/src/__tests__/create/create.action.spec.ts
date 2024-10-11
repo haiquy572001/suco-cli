@@ -1,15 +1,17 @@
+import { logger } from '@haiquy572001/suco-cli-log'
+import { testShared } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest'
 
 import type { Boilerplate, Lang } from '@vrn-deco/boilerplate-protocol'
-import { logger } from '@vrn-deco/cli-log'
-import { testShared } from '@vrn-deco/cli-shared'
 
 logger.setLevel('silent')
 
 const prompt = vi.fn().mockRejectedValue(new Error('Deliberate Mistakes'))
-vi.mock('@vrn-deco/cli-command', async () => {
-  const cliCommandModule = await vi.importActual<typeof import('@vrn-deco/cli-command')>('@vrn-deco/cli-command')
+vi.mock('@haiquy572001/suco-cli-command', async () => {
+  const cliCommandModule = await vi.importActual<typeof import('@haiquy572001/suco-cli-command')>(
+    '@haiquy572001/suco-cli-command',
+  )
   return {
     ...cliCommandModule,
     prompt,
@@ -19,7 +21,7 @@ vi.mock('@vrn-deco/cli-command', async () => {
 const mkdirpSyncSpy = vi.spyOn(fs, 'mkdirpSync').mockImplementation(() => void 0)
 const pathExistsSyncSpy = vi.spyOn(fs, 'pathExistsSync').mockImplementation(() => true)
 
-const { Command, runAction } = await import('@vrn-deco/cli-command')
+const { Command, runAction } = await import('@haiquy572001/suco-cli-command')
 const { CreateAction } = await import('../../create/create.action.js')
 
 beforeAll(() => {
@@ -34,7 +36,7 @@ afterAll(() => {
   pathExistsSyncSpy.mockRestore()
 })
 
-describe('@vrn-deco/cli-command-boilerplate -> create -> create.action.ts', () => {
+describe('@haiquy572001/suco-cli-command-boilerplate -> create -> create.action.ts', () => {
   it('When folderName is invalid, will throw a error', async () => {
     expect.assertions(1)
     try {

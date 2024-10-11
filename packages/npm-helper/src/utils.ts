@@ -5,10 +5,9 @@
  */
 import path from 'node:path'
 
+import { logger } from '@haiquy572001/suco-cli-log'
+import { isObject } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
-
-import { logger } from '@vrn-deco/cli-log'
-import { isObject } from '@vrn-deco/cli-shared'
 
 import { DistTag } from './common.js'
 

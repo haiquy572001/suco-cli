@@ -7,14 +7,13 @@ import os from 'node:os'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
+import { checkUpdate } from '@haiquy572001/suco-cli-check-update'
+import { figlet, logger } from '@haiquy572001/suco-cli-log'
+import { SwitchStatus } from '@haiquy572001/suco-cli-shared'
 import dotenv from 'dotenv'
 import fs from 'fs-extra'
 import rootCheck from 'root-check'
 import semver from 'semver'
-
-import { checkUpdate } from '@vrn-deco/cli-check-update'
-import { figlet, logger } from '@vrn-deco/cli-log'
-import { SwitchStatus } from '@vrn-deco/cli-shared'
 
 import { gradient } from './utils.js'
 

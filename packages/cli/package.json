@@ -1,9 +1,9 @@
 {
-  "name": "@vrn-deco/cli",
+  "name": "@haiquy572001/suco-cli",
   "version": "1.2.5",
   "description": "⚙️ Project scaffolding with command line tools. 🛠",
   "author": "Cphayim <i@cphayim.me>",
-  "homepage": "https://github.com/vrn-deco/cli#readme",
+  "homepage": "https://github.com/haiquy572001/suco-cli#readme",
   "license": "MIT",
   "engines": {
     "node": "^18.0.0 || >=20.0.0"
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vrn-deco/cli.git",
+    "url": "git+https://github.com/haiquy572001/suco-cli.git",
     "directory": "packages/cli"
   },
   "scripts": {
@@ -33,17 +33,17 @@
     "build": "tsc -p tsconfig.build.json"
   },
   "bugs": {
-    "url": "https://github.com/vrn-deco/cli/issues"
+    "url": "https://github.com/haiquy572001/suco-cli/issues"
   },
   "dependencies": {
-    "@vrn-deco/cli-check-update": "workspace:*",
-    "@vrn-deco/cli-command": "workspace:*",
-    "@vrn-deco/cli-command-boilerplate": "workspace:*",
-    "@vrn-deco/cli-command-config": "workspace:*",
-    "@vrn-deco/cli-config-helper": "workspace:*",
-    "@vrn-deco/cli-log": "workspace:*",
-    "@vrn-deco/cli-npm-helper": "workspace:*",
-    "@vrn-deco/cli-shared": "workspace:*",
+    "@haiquy572001/suco-cli-check-update": "workspace:*",
+    "@haiquy572001/suco-cli-command": "workspace:*",
+    "@haiquy572001/suco-cli-command-boilerplate": "workspace:*",
+    "@haiquy572001/suco-cli-command-config": "workspace:*",
+    "@haiquy572001/suco-cli-config-helper": "workspace:*",
+    "@haiquy572001/suco-cli-log": "workspace:*",
+    "@haiquy572001/suco-cli-npm-helper": "workspace:*",
+    "@haiquy572001/suco-cli-shared": "workspace:*",
     "dotenv": "^16.4.5",
     "fs-extra": "^11.2.0",
     "gradient-string": "^2.0.2",

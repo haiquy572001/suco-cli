@@ -5,11 +5,10 @@
  */
 import path from 'node:path'
 
+import { logger } from '@haiquy572001/suco-cli-log'
+import { NPMRegistry, PackageManager } from '@haiquy572001/suco-cli-shared'
 import { execa } from 'execa'
 import fs from 'fs-extra'
-
-import { logger } from '@vrn-deco/cli-log'
-import { NPMRegistry, PackageManager } from '@vrn-deco/cli-shared'
 
 import { DistTag } from './common.js'
 import { type InstallOptions, installPackage } from './install.js'

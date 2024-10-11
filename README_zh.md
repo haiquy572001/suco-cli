@@ -1,13 +1,13 @@
 <div align="center">
 
-<a href="https://github.com/vrn-deco/cli">
+<a href="https://github.com/haiquy572001/suco-cli">
 <img src="./docs/images/cli-logo.png" width="600" alt="vrn-cli" />
 </a>
 
-![GitHub Actions Status](https://github.com/vrn-deco/cli/actions/workflows/ci.yml/badge.svg)
-[![codecov](https://codecov.io/gh/vrn-deco/cli/branch/main/graph/badge.svg?token=9PA5BCTSFB)](https://codecov.io/gh/vrn-deco/cli)
-[![npm package](https://badgen.net/npm/v/@vrn-deco/cli)](https://www.npmjs.com/package/@vrn-deco/cli)
-![GitHub language](https://img.shields.io/github/languages/top/vrn-deco/cli.svg)
+![GitHub Actions Status](https://github.com/haiquy572001/suco-cli/actions/workflows/ci.yml/badge.svg)
+[![codecov](https://codecov.io/gh/haiquy572001/suco-cli/branch/main/graph/badge.svg?token=9PA5BCTSFB)](https://codecov.io/gh/haiquy572001/suco-cli)
+[![npm package](https://badgen.net/npm/v/@haiquy572001/suco-cli)](https://www.npmjs.com/package/@haiquy572001/suco-cli)
+![GitHub language](https://img.shields.io/github/languages/top/haiquy572001/suco-cli.svg)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-f49033.svg)](https://pnpm.io/)
 
@@ -15,7 +15,7 @@
 
 </div>
 
-`@vrn-deco/cli`是一个自动化命令行工具，核心功能是通过 `boilerplate` 来帮助您快速搭建一个工程化项目。它支持多种创建模式，您可以从我们提供的来源获取 `boilerplate`，也可以指定第三方或您自己的来源。
+`@haiquy572001/suco-cli`是一个自动化命令行工具，核心功能是通过 `boilerplate` 来帮助您快速搭建一个工程化项目。它支持多种创建模式，您可以从我们提供的来源获取 `boilerplate`，也可以指定第三方或您自己的来源。
 
 > ⚠️ 请确保您的 **Node.js 版本 >=18.0.0**
 
@@ -38,15 +38,15 @@ pnpm create vrn
 
 ### 安装 CLI
 
-如果您需要经常使用，或打算学习后续的进阶指南，那么请将 `@vrn-deco/cli` 安装到全局
+如果您需要经常使用，或打算学习后续的进阶指南，那么请将 `@haiquy572001/suco-cli` 安装到全局
 
 ```sh
 # npm
-npm install -g @vrn-deco/cli
+npm install -g @haiquy572001/suco-cli
 # yarn
-yarn add --global @vrn-deco/cli
+yarn add --global @haiquy572001/suco-cli
 # pnpm
-pnpm install -g @vrn-deco/cli
+pnpm install -g @haiquy572001/suco-cli
 ```
 
 让我们再创建一个项目，这次通过执行 `vrn create` 命令

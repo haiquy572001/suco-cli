@@ -3,11 +3,10 @@
  * @Date: 2021-07-22 09:50:13
  * @Description: check update
  */
+import { type BaseConfig, readConfig, updateConfig } from '@haiquy572001/suco-cli-config-helper'
+import { boxen, colors, dedent, logger } from '@haiquy572001/suco-cli-log'
+import { queryPackageLatestVersion } from '@haiquy572001/suco-cli-npm-helper'
 import semver from 'semver'
-
-import { type BaseConfig, readConfig, updateConfig } from '@vrn-deco/cli-config-helper'
-import { boxen, colors, dedent, logger } from '@vrn-deco/cli-log'
-import { queryPackageLatestVersion } from '@vrn-deco/cli-npm-helper'
 
 type CheckUpdateConfig = BaseConfig & {
   // timestamp of last check for updates

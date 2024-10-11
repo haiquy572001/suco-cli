@@ -5,11 +5,10 @@
  */
 import path from 'node:path'
 
+import { Command, registerCommands } from '@haiquy572001/suco-cli-command'
+import { logger } from '@haiquy572001/suco-cli-log'
+import { isObject } from '@haiquy572001/suco-cli-shared'
 import fs from 'fs-extra'
-
-import { Command, registerCommands } from '@vrn-deco/cli-command'
-import { logger } from '@vrn-deco/cli-log'
-import { isObject } from '@vrn-deco/cli-shared'
 
 import { gradient } from './utils.js'
 

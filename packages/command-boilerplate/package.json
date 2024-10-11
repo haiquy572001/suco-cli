@@ -1,9 +1,9 @@
 {
-  "name": "@vrn-deco/cli-command-boilerplate",
+  "name": "@haiquy572001/suco-cli-command-boilerplate",
   "version": "1.2.5",
   "description": "vrn boilerplate command",
   "author": "Cphayim <i@cphayim.me>",
-  "homepage": "https://github.com/vrn-deco/cli#readme",
+  "homepage": "https://github.com/haiquy572001/suco-cli#readme",
   "license": "MIT",
   "type": "module",
   "exports": "./dist/index.js",
@@ -18,22 +18,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vrn-deco/cli.git",
+    "url": "git+https://github.com/haiquy572001/suco-cli.git",
     "directory": "packages/command-boilerplate"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json"
   },
   "bugs": {
-    "url": "https://github.com/vrn-deco/cli/issues"
+    "url": "https://github.com/haiquy572001/suco-cli/issues"
   },
   "dependencies": {
     "@vrn-deco/boilerplate-protocol": "^1.3.1",
-    "@vrn-deco/cli-command": "workspace:*",
-    "@vrn-deco/cli-config-helper": "workspace:*",
-    "@vrn-deco/cli-log": "workspace:*",
-    "@vrn-deco/cli-npm-helper": "workspace:*",
-    "@vrn-deco/cli-shared": "workspace:*",
+    "@haiquy572001/suco-cli-command": "workspace:*",
+    "@haiquy572001/suco-cli-config-helper": "workspace:*",
+    "@haiquy572001/suco-cli-log": "workspace:*",
+    "@haiquy572001/suco-cli-npm-helper": "workspace:*",
+    "@haiquy572001/suco-cli-shared": "workspace:*",
     "compressing": "^1.10.0",
     "execa": "^6.1.0",
     "fs-extra": "^11.2.0",
