@@ -1,0 +1,37 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  },
+  "include": ["src/**/*", "../global.d.ts"],
+  "references": [
+    // -------------------------------------------------
+    {
+      "path": "../shared"
+    },
+    {
+      "path": "../log"
+    },
+    {
+      "path": "../npm-helper"
+    },
+    {
+      "path": "../command"
+    },
+    // -------------------------------------------------
+    {
+      "path": "../config-helper"
+    },
+    {
+      "path": "../check-update"
+    },
+    // -------------------------------------------------
+    {
+      "path": "../command-config"
+    },
+    {
+      "path": "../command-boilerplate"
+    }
+  ]
+}

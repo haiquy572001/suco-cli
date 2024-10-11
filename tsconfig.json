@@ -1,0 +1,8 @@
+{
+  "extends": "@ombro/tsconfig/tsconfig.esm.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2022", // enable pure esmodule and top-level await
+    "composite": true
+  }
+}

@@ -1,0 +1,9 @@
+.DS_Store
+*.log
+*.tsbuildinfo
+*.code-workspace
+
+node_modules/
+dist/
+tmp/
+coverage/
